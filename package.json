@@ -1,0 +1,19 @@
+{
+  "name": "rest-and-rooms-lambda-rooms-details",
+  "version": "1.0.0",
+  "description": "Rest and rooms lambda rooms details api",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "zip -FSr build.zip node_modules src/*"
+  },
+  "author": "Luis Giraldo",
+  "license": "ISC",
+  "dependencies": {
+    "aws-serverless-express": "^3.3.6",
+    "axios": "^0.18.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "mysql2": "^2.1.0"
+  }
+}
