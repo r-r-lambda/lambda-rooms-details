@@ -12,10 +12,9 @@ const getRoomsDetailsDao = async (id) => {
     connection = await poolPromise.getConnection();
 
     [room] = await connection.query(
-      `SELECT r.id, r.property_name, r.price, r.currency, r.rating, r.agency_id, i.url as thumbnail
-      FROM room as r
-      INNER JOIN room_images as i on (i.room_id = r.id AND i.is_thumbnail = 1)
-      WHERE r.id = ?`,
+      `SELECT id, property_name, price, currency, rating, agency_id
+      FROM room
+      WHERE id = ?`,
       [id]
     );
 
